@@ -1,2 +1,2 @@
-# SpatialExpressionPlots
-Spatial gene expression plot
+# SpatiaInSituPlots
+Spatial InSitu plot including gene expression and cell type
