@@ -1,15 +1,11 @@
 import numpy as np
-import pandas as pd
-from aicsimageio import imread
 import matplotlib.pyplot as plt
-from skimage.measure import regionprops, label
-from skimage.segmentation import flood, flood_fill
+from skimage.measure import regionprops
 from skimage.color import label2rgb
 from skimage.morphology import erosion
-from skimage.morphology import square, octagon
-import scipy.ndimage as ndi
+from skimage.morphology import octagon
 
-def get_new_mask(mask, df):
+def get_new_mask(mask, df, cell_types):
     ccs = regionprops(mask)
     val2cc = {}
     for cc in ccs:
